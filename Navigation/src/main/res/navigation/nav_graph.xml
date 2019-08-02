@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/matchFragment">
+
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.test.match.MatchFragment"
+        android:label="MatchFragment"
+        tools:layout="@layout/fragment_match" >
+        <action
+            android:id="@+id/action_matchFragment_to_equipeFragment"
+            app:destination="@id/equipeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/equipeFragment"
+        android:name="com.test.equipe.EquipeFragment"
+        android:label="EquipeFragment"
+        tools:layout="@layout/fragment_equipe" >
+        <argument
+            android:name="idEquipe"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

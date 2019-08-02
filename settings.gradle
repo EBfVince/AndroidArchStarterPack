@@ -1,0 +1,2 @@
+include ':app', ':Core', ':Match', ':Equipe', ':Navigation', ':CoreBase'
+rootProject.name='TestApp'

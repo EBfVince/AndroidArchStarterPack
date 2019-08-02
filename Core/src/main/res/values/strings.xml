@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">core</string>
+
+    <string name="erreur_inconnue">Une erreur est survenue…</string>
+    <string name="erreur_api">Erreur API</string>
+    <string name="erreur_connexion_internet">Aucune connexion internet…</string>
+    <string name="erreur_serveur_inaccessible">Nous avons quelques petits soucis techniques, veuillez réessayer plus tard.</string>
+</resources>
