@@ -11,7 +11,7 @@ android {
 dependencies {
 
     implementation project(Modules.core)
-    implementation project(Modules.coreBase)
+    implementation project(Modules.common)
     implementation project(Modules.navigation)
 
     // Kotlin

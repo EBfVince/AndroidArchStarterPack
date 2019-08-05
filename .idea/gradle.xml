@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Common" />
             <option value="$PROJECT_DIR$/Core" />
-            <option value="$PROJECT_DIR$/CoreBase" />
             <option value="$PROJECT_DIR$/Equipe" />
             <option value="$PROJECT_DIR$/Match" />
             <option value="$PROJECT_DIR$/Navigation" />

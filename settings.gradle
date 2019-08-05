@@ -1,2 +1,2 @@
-include ':app', ':Core', ':Match', ':Equipe', ':Navigation', ':CoreBase'
+include ':app', ':Core', ':Match', ':Equipe', ':Navigation', ':Common'
 rootProject.name='TestApp'

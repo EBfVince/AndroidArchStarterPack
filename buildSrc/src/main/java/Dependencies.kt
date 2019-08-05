@@ -7,7 +7,7 @@ object Modules {
     val navigation = ":Navigation"
 
     val core = ":Core"
-    val coreBase = ":CoreBase"
+    val common = ":Common"
 
     val equipe = ":Equipe"
     val match = ":Match"
@@ -17,7 +17,7 @@ object Modules {
 object Versions {
 
     val appCompat = "1.1.0-rc01"
-    val constraintLayout = "2.0.0-beta2"
+    val constraintLayout = "1.1.3"
     val coreKtx = "1.2.0-alpha02"
     val joda = "2.10.1"
     val koin = "2.0.1"
