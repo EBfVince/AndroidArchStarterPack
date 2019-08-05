@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply from: '../android_commons.gradle'
+
+
+android {
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+
+    implementation project(Modules.core)
+    implementation project(Modules.coreBase)
+    implementation project(Modules.navigation)
+
+    // Kotlin
+    implementation Libs.kotlinCoroutine
+    implementation Libs.kotlinCoroutineAndroid
+
+    // Koin
+    implementation Libs.koin
+    implementation Libs.koinViewModel
+
+    // Android libs
+    implementation AndroidLibs.appCompat
+    implementation AndroidLibs.coreKtx
+    implementation AndroidLibs.constraintLayout
+    implementation AndroidLibs.lifecycleViewModel
+    implementation AndroidLibs.lifecycleExtensions
+
+    // Navigation
+    implementation AndroidLibs.navigation
+    implementation AndroidLibs.navigationFrag
+
+}
