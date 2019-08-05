@@ -53,8 +53,8 @@ object AndroidLibs {
 
     // Lifecycle
     // https://developer.android.com/jetpack/androidx/releases/lifecycle
-    val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
     val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
     val lifecycleViewModel =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 
     // Navigation
