@@ -28,14 +28,13 @@ android {
 dependencies {
 
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation Libs.kotlin
 
     // Koin
-    implementation "org.koin:koin-android:2.0.1"
+    implementation Libs.koin
 
     // Navigation
-    def nav_dep = "2.1.0-beta02"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_dep"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_dep"
+    implementation AndroidLibs.navigation
+    implementation AndroidLibs.navigationFrag
 
 }

@@ -42,29 +42,26 @@ android {
 
 dependencies {
 
-    implementation project(':Core')
-    implementation project(':Match')
-    implementation project(':Equipe')
+    // Core
+    implementation project(Modules.core)
+
+    // Features
+    implementation project(Modules.match)
+    implementation project(Modules.equipe)
 
     // Kotlin
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation Libs.kotlin
 
     // Koin
-    implementation "org.koin:koin-android:2.0.1"
+    implementation Libs.koin
 
     // Android libs
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation AndroidLibs.appCompat
+    implementation AndroidLibs.coreKtx
+    implementation AndroidLibs.constraintLayout
 
     // Navigation
-    def nav_dep = "2.1.0-beta02"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_dep"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_dep"
-
-    // Tests
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation AndroidLibs.navigation
+    implementation AndroidLibs.navigationFrag
 
 }
