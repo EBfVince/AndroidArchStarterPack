@@ -56,5 +56,10 @@
 -if interface * { @retrofit2.http.* <methods>; }
 -keep,allowobfuscation interface <1>
 
+
 # keep everything in this package from being removed or renamed
 -keep class com.test.core.model.** { *; }
+
+# https://medium.com/androiddevelopers/practical-proguard-rules-examples-5640a3907dc9
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+-repackageclasses

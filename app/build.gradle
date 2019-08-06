@@ -8,6 +8,18 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildTypes {
+
+        // https://medium.com/androiddevelopers/practical-proguard-rules-examples-5640a3907dc9
+        debugMini {
+            initWith debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            matchingFallbacks = ['debug']
+        }
+
+    }
+
     dataBinding {
         enabled = true
     }
