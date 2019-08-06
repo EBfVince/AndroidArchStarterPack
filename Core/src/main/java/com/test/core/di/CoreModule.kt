@@ -2,7 +2,7 @@ package com.test.core.di
 
 import androidx.room.Room
 import com.test.core.AppDispatchers
-import com.test.core.local.OTV2Database
+import com.test.core.local.AppDatabase
 import com.test.core.remote.EquipeDataSource
 import com.test.core.remote.MatchDataSource
 import com.test.core.remote.api.EquipeService
@@ -21,12 +21,12 @@ val localModule = module {
 
     single(DATABASE) {
         Room
-        .databaseBuilder(androidApplication(), OTV2Database::class.java, "OTV2.db")
+        .databaseBuilder(androidApplication(), AppDatabase::class.java, "OTV2.db")
         .build()
     }
 
-    factory { get<OTV2Database>(DATABASE).matchDao() }
-    factory { get<OTV2Database>(DATABASE).equipeDao() }
+    factory { get<AppDatabase>(DATABASE).matchDao() }
+    factory { get<AppDatabase>(DATABASE).equipeDao() }
 
 }
 

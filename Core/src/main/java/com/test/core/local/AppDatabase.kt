@@ -15,7 +15,7 @@ import com.test.core.model.Match
     version = 2,
     exportSchema = false
 )
-abstract class OTV2Database : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
     abstract fun matchDao(): MatchDao
 

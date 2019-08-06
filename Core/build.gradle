@@ -12,13 +12,19 @@ android {
 
 dependencies {
 
+    // Kotlin
+    implementation Libs.kotlinCoroutine
+    implementation Libs.kotlinCoroutineAndroid
+
     // Koin
     implementation Libs.koin
 
     // Room
     kapt AndroidLibs.roomCompiler
     implementation AndroidLibs.roomRunTime
-    implementation AndroidLibs.roomKtx
+    implementation (AndroidLibs.roomKtx) {
+        exclude group: "org.jetbrains.kotlinx"
+    }
 
     // Retrofit & Gson
     implementation Libs.retrofit
@@ -26,6 +32,16 @@ dependencies {
 
     // Android libs
     implementation AndroidLibs.lifecycleExtensions
-    // implementation AndroidLibs.lifecycleCommon
+
+
+    // == Tests
+    testImplementation TestLibs.koin
+    testImplementation TestLibs.mockWebServer
+
+    androidTestImplementation TestLibs.androidTestRunner
+    androidTestImplementation TestLibs.archCoreTest
+    androidTestImplementation TestLibs.junit
+    androidTestImplementation TestLibs.koin
+    androidTestImplementation TestLibs.coroutine
 
 }
