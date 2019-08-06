@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.test.corebase.base.BaseFragment
-import com.test.corebase.base.BaseViewModel
+import com.test.common.base.BaseFragment
+import com.test.common.base.BaseViewModel
 import com.test.equipe.databinding.FragmentEquipeBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 

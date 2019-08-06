@@ -3,12 +3,12 @@ package com.test.match
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.viewModelScope
-import com.adelya.otv2.core.AppDispatchers
-import com.adelya.otv2.core.model.Equipe
-import com.adelya.otv2.core.model.Match
-import com.adelya.otv2.core.repository.MatchRepository
-import com.adelya.otv2.core.repository.utils.Resource
-import com.test.corebase.base.BaseViewModel
+import com.test.core.AppDispatchers
+import com.test.core.model.Equipe
+import com.test.core.model.Match
+import com.test.core.repository.MatchRepository
+import com.test.core.repository.utils.Resource
+import com.test.common.base.BaseViewModel
 import kotlinx.coroutines.launch
 
 class MatchViewModel(

@@ -1,10 +1,10 @@
 package com.test.equipe
 
 import androidx.lifecycle.*
-import com.adelya.otv2.core.AppDispatchers
-import com.adelya.otv2.core.model.Equipe
-import com.adelya.otv2.core.repository.utils.Resource
-import com.test.corebase.base.BaseViewModel
+import com.test.core.AppDispatchers
+import com.test.core.model.Equipe
+import com.test.core.repository.utils.Resource
+import com.test.common.base.BaseViewModel
 import com.test.equipe.domain.GetEquipeFromIdUseCase
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

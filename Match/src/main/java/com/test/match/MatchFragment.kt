@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.test.corebase.base.BaseFragment
-import com.test.corebase.base.BaseViewModel
+import com.test.common.base.BaseFragment
+import com.test.common.base.BaseViewModel
 import com.test.match.databinding.FragmentMatchBinding
 import org.koin.android.viewmodel.ext.android.viewModel
 

@@ -1,11 +1,13 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-kapt'
 apply from: '../android_commons.gradle'
+apply plugin: 'kotlin-kapt'
 
 android {
+
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 }
 
 dependencies {
