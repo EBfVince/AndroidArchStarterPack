@@ -7,10 +7,8 @@ import androidx.room.PrimaryKey
 data class Equipe(
 
     @PrimaryKey
-    // @SerializedName("id")
     val id: Int,
 
-    // @SerializedName("nom")
     val nom: String
 
 ) {
