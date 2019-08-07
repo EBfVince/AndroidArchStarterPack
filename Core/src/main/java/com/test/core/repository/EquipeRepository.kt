@@ -21,7 +21,7 @@ class EquipeRepository(
 
             override fun shouldFetch(data: Equipe?): Boolean = true
 
-            override suspend fun loadFromDb(): Equipe = dao.getEquipe(idEquipe)
+            override suspend fun loadFromDb() = dao.getEquipe(idEquipe)
 
             override suspend fun createCallAsync(): Response<Equipe.BobEquipe> = dataSource.fetchEquipe(idEquipe)
         }.build().asLiveData()

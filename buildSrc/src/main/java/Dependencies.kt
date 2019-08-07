@@ -30,6 +30,7 @@ object Versions {
     val kotlin = "1.3.41"
     val kotlinCoroutine = "1.3.0-RC"
     val lifecycle = "2.2.0-alpha02"
+    val liveDataTest = "1.1.0"
     val mockk = "1.9.2"
     val mockwebserver = "2.7.5"
     val navigation = "2.1.0-beta02"
@@ -102,5 +103,8 @@ object TestLibs {
 
     // Mock WebServer
     val mockWebServer = "com.squareup.okhttp:mockwebserver:${Versions.mockwebserver}"
+
+    // LiveData
+    val liveData = "com.jraska.livedata:testing-ktx:${Versions.liveDataTest}"
 
 }

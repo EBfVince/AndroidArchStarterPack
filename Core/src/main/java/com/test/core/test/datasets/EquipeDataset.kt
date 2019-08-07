@@ -10,4 +10,6 @@ object EquipeDataset {
         Equipe(id = 3, nom = "Equipe 3")
     )
 
+    val FAKE_EQUIPE = Equipe(id = 26, nom = "Bro")
+
 }

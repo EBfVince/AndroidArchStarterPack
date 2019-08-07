@@ -9,7 +9,7 @@ import com.test.core.R
  * La classe resource permet de connaître le statut d'une donnée.
  * @param <T> Le type de l'objet dont on veut préciser le statut
 </T> */
-class Resource<out T> private constructor(
+data class Resource<out T> constructor(
     val status: Status,
     val data: T?,
     private val errorReason: ErrorReason
@@ -53,10 +53,6 @@ class Resource<out T> private constructor(
         if (status == Status.SUCCESS && data != null) {
             f(data)
         }
-    }
-
-    override fun toString(): String {
-        return "Resource(status=$status, data=$data, errorReason=$errorReason)"
     }
 
 }

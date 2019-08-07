@@ -37,6 +37,11 @@ dependencies {
     // == Tests
     testImplementation TestLibs.koin
     testImplementation TestLibs.mockWebServer
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockk
+    testImplementation TestLibs.archCoreTest
+    testImplementation TestLibs.coroutine
+    testImplementation TestLibs.liveData
 
     androidTestImplementation TestLibs.androidTestRunner
     androidTestImplementation TestLibs.archCoreTest

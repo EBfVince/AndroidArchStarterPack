@@ -33,4 +33,12 @@ dependencies {
     implementation AndroidLibs.navigation
     implementation AndroidLibs.navigationFrag
 
+
+    // Tests
+    testImplementation TestLibs.junit
+    testImplementation TestLibs.mockk
+    testImplementation TestLibs.androidTestRunner
+    testImplementation TestLibs.archCoreTest
+    // kaptAndroidTest TestLibs.databinding
+
 }

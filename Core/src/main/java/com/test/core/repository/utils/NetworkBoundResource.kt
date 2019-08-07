@@ -1,6 +1,5 @@
 package com.test.core.repository.utils
 
-import android.util.Log
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
@@ -54,19 +53,19 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
         try {
 
             // Execute l'appel API
-            val rep = createCallAsync()
+            val rep = createCallAsync().body() ?: throw Exception("A traiter")
 
-            Log.d("NetworkBoundResource", "Res = ${rep.body()}")
+            // Log.d("NetworkBoundResource", "Res = $rep")
 
             // Enregistre en cache les résultats
-            saveCallResults(processResponse(rep.body()!!))
+            saveCallResults(processResponse(rep))
 
             // Récupère depuis le cache les derniers résultats
             setValue(Resource.success(loadFromDb()))
 
         } catch (e: Exception) {
 
-            Log.e("NetworkBoundResource", "${e.message}")
+            // Log.e("NetworkBoundResource", "${e.message}")
 
             // Erreur, on affiche le cache
             val error = detectError(e)
@@ -110,7 +109,7 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
     protected abstract fun shouldFetch(data: ResultType?): Boolean
 
     @WorkerThread
-    protected abstract suspend fun loadFromDb(): ResultType
+    protected abstract suspend fun loadFromDb(): ResultType?
 
     @WorkerThread
     protected abstract suspend fun createCallAsync(): Response<RequestType>

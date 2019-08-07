@@ -8,6 +8,6 @@ import com.test.core.model.Equipe
 interface EquipeDao : BaseDao<Equipe> {
 
     @Query("SELECT * FROM Equipe WHERE id = :id")
-    suspend fun getEquipe(id: Int): Equipe
+    suspend fun getEquipe(id: Int): Equipe?
 
 }

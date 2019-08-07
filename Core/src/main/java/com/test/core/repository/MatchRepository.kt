@@ -21,7 +21,7 @@ class MatchRepository(
 
             override fun shouldFetch(data: Match?): Boolean = true
 
-            override suspend fun loadFromDb(): Match = dao.getMatch(idMatch)
+            override suspend fun loadFromDb(): Match? = dao.getMatch(idMatch)
 
             override suspend fun createCallAsync(): Response<Match> = dataSource.fetchMatch(idMatch)
         }.build().asLiveData()
