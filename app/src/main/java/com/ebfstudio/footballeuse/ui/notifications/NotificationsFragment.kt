@@ -45,14 +45,11 @@ class NotificationsFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val article = Article(
-            id = "ihslfjkhqsglkjhfdlkgjh",
-            title = "Nouveau",
-            author = "Moi",
-            body = "Je suis un body",
-            imageUrl = "url",
-            seen = 4,
-            plop = "yo",
-            bro = false
+            id = "yo3565",
+            title = "Oki",
+            author = "Toi",
+            body = "Bla blu",
+            imageUrl = "url3"
         )
 
         val articlesDao: ArticlesDao = get()

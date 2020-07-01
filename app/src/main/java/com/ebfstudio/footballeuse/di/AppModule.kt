@@ -11,17 +11,16 @@ import org.koin.dsl.module
  * Created by Vincent Guillebaud on 01/07/2020
  */
 
-private val DATABASE = named("DATABASE")
-
 val appModule = module {
 
     single {
         Room
             .databaseBuilder(androidContext(), AppDatabase::class.java, "molo.vince")
             .addMigrations(
-                DatabaseMigrations.MIGRATION_1_2,
-                DatabaseMigrations.MIGRATION_2_3,
-                DatabaseMigrations.MIGRATION_3_4
+                    DatabaseMigrations.MIGRATION_1_2,
+                    DatabaseMigrations.MIGRATION_2_3,
+                    DatabaseMigrations.MIGRATION_3_4,
+                    DatabaseMigrations.MIGRATION_4_5
             )
             .build()
     }

@@ -15,10 +15,7 @@ data class Article(
     val title: String,
     val author : String,
     val body: String,
-    val imageUrl: String,
-    var seen: Int?,
-    val plop: String,
-    val bro: Boolean
+    val imageUrl: String
 
 ) {
 
