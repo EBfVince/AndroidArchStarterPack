@@ -1,4 +1,4 @@
-package com.ebfstudio.footballeuse.data.repository
+package com.ebfstudio.footballeuse.model.utils
 
 /**
  * Created by Vincent Guillebaud on 01/07/2020

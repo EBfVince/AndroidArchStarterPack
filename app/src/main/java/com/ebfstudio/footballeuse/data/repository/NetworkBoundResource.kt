@@ -3,6 +3,8 @@ package com.ebfstudio.footballeuse.data.repository
 import android.util.Log
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
+import com.ebfstudio.footballeuse.model.utils.ErrorReason
+import com.ebfstudio.footballeuse.model.utils.Resource
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

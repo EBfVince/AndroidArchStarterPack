@@ -9,6 +9,7 @@ import org.koin.core.context.startKoin
 /**
  * Created by Vincent Guillebaud on 01/07/2020
  */
+@Suppress("unused")
 class App : Application() {
 
     override fun onCreate() {

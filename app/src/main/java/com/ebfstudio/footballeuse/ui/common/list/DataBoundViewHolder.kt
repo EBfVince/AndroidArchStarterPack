@@ -1,4 +1,4 @@
-package com.ebfstudio.footballeuse.ui.notifications.viewholder
+package com.ebfstudio.footballeuse.ui.common.list
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView

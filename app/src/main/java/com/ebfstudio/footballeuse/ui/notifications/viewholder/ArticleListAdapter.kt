@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DiffUtil
 import com.ebfstudio.footballeuse.R
 import com.ebfstudio.footballeuse.databinding.ItemArticleBinding
 import com.ebfstudio.footballeuse.model.Article
+import com.ebfstudio.footballeuse.ui.common.list.DataBoundListAdapter
 
 /**
  * Created by Vincent Guillebaud on 02/07/2020

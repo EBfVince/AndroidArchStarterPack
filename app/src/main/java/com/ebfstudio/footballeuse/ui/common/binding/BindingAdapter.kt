@@ -1,4 +1,4 @@
-package com.ebfstudio.footballeuse.ui.notifications.binding
+package com.ebfstudio.footballeuse.ui.common.binding
 
 import android.view.View
 import android.widget.ImageView
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.ebfstudio.footballeuse.data.repository.Resource
+import com.ebfstudio.footballeuse.model.utils.Resource
 
 /**
  * Created by Vincent Guillebaud on 02/07/2020

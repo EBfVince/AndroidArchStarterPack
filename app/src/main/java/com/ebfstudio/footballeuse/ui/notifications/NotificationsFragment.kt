@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ebfstudio.footballeuse.autoCleared
 import com.ebfstudio.footballeuse.databinding.FragmentNotificationsBinding
+import com.ebfstudio.footballeuse.ui.common.autoCleared
 import com.ebfstudio.footballeuse.ui.notifications.viewholder.ArticleListAdapter
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.koin.android.viewmodel.ext.android.viewModel

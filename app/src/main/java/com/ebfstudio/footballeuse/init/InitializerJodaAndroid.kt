@@ -7,6 +7,7 @@ import net.danlew.android.joda.JodaTimeAndroid
 /**
  * Created by Vincent Guillebaud on 01/07/2020
  */
+@Suppress("unused")
 class InitializerJodaAndroid : Initializer<Unit> {
 
     override fun create(context: Context) = JodaTimeAndroid.init(context)

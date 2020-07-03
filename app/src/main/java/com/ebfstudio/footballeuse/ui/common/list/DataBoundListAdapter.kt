@@ -1,4 +1,4 @@
-package com.ebfstudio.footballeuse.ui.notifications.viewholder
+package com.ebfstudio.footballeuse.ui.common.list
 
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
@@ -17,7 +17,9 @@ abstract class DataBoundListAdapter<T, V : ViewDataBinding>(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DataBoundViewHolder<V> {
         val binding = createBinding(parent)
-        return DataBoundViewHolder(binding)
+        return DataBoundViewHolder(
+            binding
+        )
     }
 
     protected abstract fun createBinding(parent: ViewGroup): V

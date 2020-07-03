@@ -3,6 +3,7 @@ package com.ebfstudio.footballeuse.data.repository
 import com.ebfstudio.footballeuse.data.local.dao.ArticlesDao
 import com.ebfstudio.footballeuse.data.remote.api.FoodiumService
 import com.ebfstudio.footballeuse.model.Article
+import com.ebfstudio.footballeuse.model.utils.Resource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 
