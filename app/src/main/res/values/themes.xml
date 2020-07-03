@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Footballeuse.BaseSplash" parent="Theme.Footballeuse">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- Comme c'est surchargé dans styles-v21 et styles-v23 -->
+    <style name="Theme.Footballeuse.BaseSplash.Splash" parent="Theme.Footballeuse.BaseSplash">
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
 </resources>
