@@ -1,10 +1,13 @@
 package com.ebfstudio.footballeuse.data.repository
 
+import android.util.Log
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
+import java.net.UnknownHostException
 
 /**
  * Created by Vincent Guillebaud on 01/07/2020
@@ -37,15 +40,28 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
             }
 
             // Emit the data from the db
-            emitAll(loadFromDb().map { Resource.success(it) })
+            try {
+                emitAll(loadFromDb().map { Resource.success(it) })
+            } catch (jobException: CancellationException) {
+            }
 
         } catch (e: Exception) {
 
             // Do something when an error occurred
-            onFetchFailed()
+            onFetchFailed(e)
+
+            val error: ErrorReason = when (e) {
+                is UnknownHostException -> ErrorReason.NO_INTERNET
+                else -> ErrorReason.UNKNOWN.also {
+                    Log.e(
+                        "NetworkBoundResource",
+                        e.message ?: "erreur"
+                    )
+                }.also { e.printStackTrace() }
+            }
 
             // Emit db data with error status
-            emitAll(loadFromDb().map { Resource.error(ErrorReason.UNKNOWN, it) })
+            emitAll(loadFromDb().map { Resource.error(error, it) })
 
         }
 
@@ -63,6 +79,6 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
     @MainThread
     protected open fun shouldFetch(data: ResultType?): Boolean = true
 
-    protected open fun onFetchFailed() {}
+    protected open fun onFetchFailed(e: Exception) {}
 
 }
